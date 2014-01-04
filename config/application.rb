@@ -6,6 +6,8 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
+
+
 module Pinteresting
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -23,5 +25,13 @@ module Pinteresting
         #Required for Heroku
         config.assets.intialize_on_precompile = false
 
+    console do
+  ActiveRecord::Base.connection
+end
+
+
   end
+
+  
+
 end
